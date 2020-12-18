@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {background-color:#f4d9f5;font-size:16px;}
+		p{text-indent:32px;}
+		a{text-decoration:none;color:#000;}
+		.top {width:1000px;height:100px;margin: auto;position:relative;background:#f6f6f6;}
+		.top  img{display:block; margin: 0 auto;margin:10px 0 0 30px;}
+		.header {width:1000px;height:320px;margin: auto;position:relative;}
+		.header  img{display:block; margin: 0 auto;}
+
+		.navigation{width:1000px;height:42px;margin: 0px auto;text-align:center;background-color:#5e0025;}
+		.navigation ul {list-style-type: none;margin: 0 auto;padding: 0;overflow: hidden;display:inline-block;}
+		.navigation li {float: left;}
+		.navigation li a {display: block;color: #000000;text-align: center;padding: 10px 50px;text-decoration: none; font-size:16px;color:#ffffff;}
+		.navigation li a:hover {background-color: #C3AA6A;}
+
+		.footer {clear:both;width:1000px;height:69px;margin: auto;}
+		.footer .info2 {width:1000px;height:69px;margin: 0 auto;display: block;padding:30px 0px;background-color:#f6f6f6;text-align: left;line-height:30px;background-image:url(../images/img039.png);background-position:bottom right;background-repeat:no-repeat;background-size:150px 38px;}
+		.footer .fl {width: 400px;padding: 0 0 0 30px;float: left;}
+		.footer .fl h3 {line-height: 26px;margin-bottom: 5px;font-size: 16px;color: #5e0025;}
+		.footer .fl p,p a {line-height: 22px;color:#5e0025;font-size:14px;}
+
+		hr {width:1000px;margin: auto;height: 3px;background-color: #5e0025;border: none;}
+
+		.layer3 {width:1000px;margin: 0px auto;}
+		.layer3  .left {width:278px;height:702px;margin: 0px auto;float:left;margin:10px;border-radius:5px;background:#f3f3f3;} 
+		.layer3  .left .header {width:278px;height:40px;margin: 0px auto;padding-top:10px;text-align: center;background-color:#5e0025;color:#ffffff;}  
+		.layer3  .left .content {width:278px;height:300px;margin: 0px auto;padding-top:10px;text-align: left;line-height:25px;color:#000000;}  
+		.layer3  .left .content ul {list-style-type: none;margin: 0 auto;padding: 0;overflow: hidden;display:inline-block;}
+		.layer3  .left .content li {float: left;margin:10px;width:260px;}
+		.layer3  .left .content li a {display: block;text-align: left;padding: 10px 10px;text-decoration: none; color:#000000;}
+		.layer3  .left .content li a:hover {background-color: #C3AA6A;}
+		.layer3  .right {width:668px;float:left;margin:10px;}
+		.layer3  .right .header {width:678px;height:30px;margin: 0px auto;padding-top:10px;text-align: center;background-color:#5e0025;color:#ffffff;}  
+		.layer3  .right .content ul {list-style-type: none;margin: 0 auto;padding: 0;overflow: hidden;display:inline-block;}
+		.layer3  .right .content li {float: left;width:330px;padding-top:10px;}
+
+		.layer3  .right .content li a {display: block;text-align: left;padding: 10px 0px 0px 10px;text-decoration: none; color:#000000;}
+		.layer3  .right .content li a .caimg{width:330px;height:260px;margin:0 auto;padding-left:10px;}
+		.layer3  .right .content li a .caimg img{padding: 10px 5px;}
+		.layer3  .right .content li a:hover .caimg img{transform:translateY(-20px);}
+		.layer3  .right .content li a .catext{font-size:20px;text-align:center;padding:10px 0px 10px 20px;}
+		.layer6 {width:1000px;margin: 0px auto;}
+		.layer6 .item{float: left;width:500px;text-align:center;margin: 0px auto;padding:10px 0px;}
+		.home-banner2{width:1000px; height:320px; position:relative; overflow:hidden;}
+		.home-banner2 .bd{width:1000px; height:320px;}
+		.home-banner2 .bd li{position:absolute;top:0;left:1000px;width:1000px;height:320px;}
+		.home-banner2 .bd img{width:100%; height:100%;}
+
+		.home-banner2 .hd{position:absolute; bottom:11px; right:15px; }
+		.home-banner2 .hd b{color:#ef3838; display:none; font-size:16px;}
+		.home-banner2 .hd b.down{display:inline-block;}
+		.home-banner2 .hd span{color:#fff; font-size:12px;}  
+		.home-banner2 .controler2 a{display:block; width:16px; position:absolute;top:120px; height:27px;}
+		.home-banner2 .controler2 a i{cursor:pointer;display:block;width:16px;height:27px; }
+		.home-banner2 .controler2 .prev{left:10px;}
+		.home-banner2 .controler2 .prev i{background-position:-60px 0;}
+		.home-banner2 .controler2 .prev:hover i{background-position:0 0;}
+		.home-banner2 .controler2 .next{right:10px;}
+		.home-banner2 .controler2 .next i{background-position:-88px 0;}
+		.home-banner2 .controler2 .next:hover i{background-position:-28px 0;}
+
+		.time1{height:25px;width:1000PX;margin:0 auto;background-color:#fff;font-size:14px;}
+		#demo { 
+			background: #FFF; 
+			overflow:hidden; 
+			border: 1px dashed #CCC; 
+			width: 1000px; 
+			margin-top:30px;
+		} 
+		#demo img { 
+		border: 1px solid #F2F2F2;margin-right:20px; 
+		} 
+		#indemo { 
+		float: left; 
+		width: 600%; 
+		} 
+		#demo1 { 
+		float: left; 
+		} 
+		#demo2 { 
+		float: left; 
+		} 		
+		#demo li a {
+		    height: 2em;
+			voice-family: "\"}\"";
+			voice-family: inherit;
+			text-decoration: none;
+			border-bottom: 1px solid #FFFFFF
+		}		
+		#demo li a:link {
+			color: #FFFFFF;
+			display: block;
+			padding: 5px 0 3px 10px;
+		}	
+		#demo li a:hover {
+			color: #000000;
+			background: #f4e1be;
+			padding: 5px 0 3px 10px;
+		}	
+		#demo li a:active {
+			color: #fff;
+			background: #646675;
+			padding: 5px 0 3px 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="timeShow" class="time1"></div>
+	<div class="top">
+		<img src="images/img039.png" height="73" width="267"/>
+	</div>
+	<div class="navigation">
+		<ul>
+			<li style="background-color:#C3AA6A;"><a href="index.html">首页</a></li>
+			<li><a href="#">什么是沟通</a></li>
+			<li><a href="#">沟通的重要性</a></li>
+			<li><a href="#">如何沟通</a></li>
+			<li><a href="#">沟通方式</a></li>
+			<li><a href="#">感悟精选</a></li>
+		</ul>
+	</div>
+	<div class="header">
+		<div class="home-banner2" id="section-focus-pic">
+			<div class="bd" data-scro="list">
+				<ul>
+					<li class="item2" style="left: 0px;">
+						<img src="images/header.jpg" width="1000" height="320" />
+					</li>
+					<li class="item2">
+						<img src="images/header2.jpg" width="1000" height="320" />
+					</li>
+					<li class="item2">
+						<img src="images/header3.jpg" width="1000" height="320" />
+					</li>
+					<li class="item2">
+						<img src="images/header2.jpg" width="1000" height="320" />
+					</li>
+				</ul>
+			</div>
+			<div class="hd" data-scro="controler">
+				<b class="down"></b>
+				<b class=""></b>
+				<b class=""></b>
+
+				<span></span>
+			</div>
+			<div class="controler2" data-scro="controler2">
+				<a href="javascript:;" class="prev"><i></i></a>
+				<a href="javascript:;" class="next"><i></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="layer3">
+		<div class="left">
+			<div class="header">经典美文</div>
+			<img src="images/i1.jpg" width="278" height="218">
+			<div class="content">
+				<ul>
+					<li style="font-size:16px;">
+						<p>
+							能够这样说，没有沟通就没有人际的互动关系，人与人之间关系，就会处在僵硬、隔阂、冷漠的状态，会出现误解、扭曲的局面，给工作和生活带来极大的害处。信息时代的到来，工作、生活节奏越来越快，人与人之间的思想需要加强交流；社会分工越来越细，信息层出不穷，现代行业之间迫切需要互通信息，这一切都离不开沟通。
+						</p>
+
+						<p>
+							沟通，是建立人际关系的桥梁，如果这个世界缺少了沟通，那将是一个不可想象的世界。
+						</p>
+					</li>
+					<li>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div class="header">
+				多和身边的人沟通，让我们变得真实和实在
+			</div>
+			<div class="content">
+				<p>
+					突然有一天，我们变得冷漠。变得不爱说话了，一个桌子上坐十来个人，没一个说话，大家仿佛约好了似得。都低着头，玩着手机，在默默的独自的笑着。
+				</p>
+				<p>
+					手机是本世界最伟大的进步，它缩小了人与人之间的距离，让天涯海角的俩个人，变得触手可及。让信息不再是隔阂，交流变得更多样化。随着手机功能的逐渐完善强大，从通话功能、短信息、彩信、MSN、QQ、微信。。。。。。互联网+的进入我们的生活，这本是一件伟大的进步，可我们被突如其来的改变，打乱了我们的生活。我们被互联网绑架了。
+				</p>
+				<p>
+					放下手机吧，多和身边的人沟通。让我们变得真实和实在。不再为了一个一毛钱的红包而愤愤难息、不再和身边的人保持潜水、不再为了刷网页而敖红双眼。不要害怕被这个世界淘汰，你没有因为手机的节制，而失去生活的精彩。真正的精彩所有付出双手的努力，去赢得。加油吧。兄弟。
+				</p>
+			</div>
+			<div class="header">
+				放下手机吧
+			</div>
+			<div class="content">
+				<ul>
+					<li><a href="#">
+						<div class="caimg">
+							<img src="images/img005.jpg" width="320" height="260"/>
+						</div>
+						<div class="catext">
+							放下手机吧，多和身边的人沟通，让我们变得真实和实在
+						</div>
+					</a></li>
+					<li>
+						<a href="#">
+						<div class="caimg"> <img  src="images/img006.jpg"  width="320" height="260"/></div>
+						<div class="catext">睡前玩手机的4大危害,特别是第3个,看完好多人默默放下手机</div>
+						</a>
+					</li>
+					<li><a href="#">
+            			<div class="caimg"> <img  src="images/img007.jpg"  width="320" height="260"/></div>
+    					<div class="catext">放下手机,不聊微信,多和身边的人说说话</div>
+            			</a>
+            		</li>
+            		<li><a href="#">
+            			<div class="caimg"> <img  src="images/img008.jpg"  width="320" height="260"/></div>
+    					<div class="catext">放下手机，多陪陪身边的人，他们才是你最宝贵的财富！</div>
+            			</a>
+            		</li>
+            		<li><a href="#">
+            			<div class="caimg"> <img  src="images/img003.jpg"  width="320" height="260"/></div>
+    					<div class="catext">手机与抑郁症之间的“爱恨情仇”,“低头族”不可忽视的细节!</div>
+            			</a>
+            		</li>
+            		<li><a href="#">
+            			<div class="caimg"> <img  src="images/img004.jpg"  width="320" height="260"/></div>
+    					<div class="catext">放下手机,趁我们还在父母的身边,多为父母做几件小事吧</div>
+            			</a>
+            		</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="layer6">
+		<div id="demo">
+			<div id="indemo">
+				<div id="demo1">
+					<a href="#"><img src="images/rh1.jpg" width="156" height="156" border="0" /></a> 
+					<a href="#"><img src="images/rh2.jpg" width="156" height="156" border="0" /></a> 
+
+					<a href="#"><img src="images/rh3.jpg" width="156" height="156" border="0" /></a> 
+					<a href="#"><img src="images/rh4.jpg" width="156" height="156" border="0" /></a> 
+
+					<a href="#"><img src="images/fs1.jpg" width="156" height="156" border="0" /></a> 
+					<a href="#"><img src="images/fs2.jpg" width="156" height="156" border="0" /></a> 
+				</div>
+				<div id="demo2"></div>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="footer">
+		<div class="info2">
+			<div class="f1">
+				<h3>版权所有</h3>
+			</div>
+		</div>
+	</div>	
+</body>
+<script type="text/javascript" language="javascript">
+	var t = null;
+	t = setTimeout(time,1000);//开始执行
+	function time()
+	{
+	clearTimeout(t);//清除定时器
+	dt = new Date();
+	var y=dt.getYear()+1900;
+	var mm=dt.getMonth()+1;
+	var d=dt.getDate();
+	var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var day=dt.getDay();
+	var h=dt.getHours();
+	var m=dt.getMinutes();
+	var s=dt.getSeconds();
+	if(h<10){h="0"+h;}
+	if(m<10){m="0"+m;}
+	if(s<10){s="0"+s;}
+	document.getElementById("timeShow").innerHTML =  "现在的时间为："+y+"年"+mm+"月"+d+"日"+weekday[day]+" "+h+":"+m+":"+s+"";
+	t = setTimeout(time,1000); //设定定时器，循环执行           
+}
+</script>
+<script type="text/javascript">
+	var speed=10; 
+	var tab=document.getElementById("demo"); 
+	var tab1=document.getElementById("demo1"); 
+	var tab2=document.getElementById("demo2"); 
+	tab2.innerHTML=tab1.innerHTML; 
+	function Marquee(){ 
+	if(tab2.offsetWidth-tab.scrollLeft<=0) 
+	tab.scrollLeft-=tab1.offsetWidth 
+	else{ 
+	tab.scrollLeft++; 
+	} 
+	} 
+	var MyMar=setInterval(Marquee,speed); 
+	tab.onmouseover=function() {clearInterval(MyMar)}; 
+	tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+</script>
+<script type="text/javascript">
+
+</script>
+</html>
