@@ -112,16 +112,16 @@
 <body>
 	<div id="timeShow" class="time1"></div>
 	<div class="top">
-		<img src="images/img039.png" height="73" width="267"/>
+		<img src="images/img039.png" height="73" width="300"/>
 	</div>
 	<div class="navigation">
 		<ul>
 			<li style="background-color:#C3AA6A;"><a href="index.html">首页</a></li>
-			<li><a href="#">什么是沟通</a></li>
-			<li><a href="#">沟通的重要性</a></li>
-			<li><a href="#">如何沟通</a></li>
-			<li><a href="#">沟通方式</a></li>
-			<li><a href="#">感悟精选</a></li>
+			<li><a href="#" id="wer" title="什么是沟通">什么是沟通</a></li>
+			<li><a href="#" id="wer" title="沟通的重要性">沟通的重要性</a></li>
+			<li><a href="#" id="wer" title="如何沟通">如何沟通</a></li>
+			<li><a href="#" id="wer" title="沟通方式">沟通方式</a></li>
+			<li><a href="#" id="wer" title="感悟精选">感悟精选</a></li>
 		</ul>
 	</div>
 	<div class="header">
@@ -300,6 +300,37 @@
 	tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
 </script>
 <script type="text/javascript">
+	var lis=document.getElementById("wer");
+	lis.onclick=function(){
+		taking=setTimeout(function(){
+			window.open("http://www.baidu.com");
+			clearTimeout(taking);
+		},200);		
+	}
+	for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function (e) {
+                var e = e || window.event;
+                this.myTitle = this.title;
+                this.title = "";
+                var tooltip = document.createElement('div');
+                tooltip.id = "tooltip";
+                tooltip.innerHTML = this.myTitle;
+                tooltip.style.left = e.clientX + 10 + "px";
+                tooltip.style.top = e.clientY + 10 + "px";
+                document.body.appendChild(tooltip);
+            };
+            lis[i].onmousemove = function (e) {
+                var e = e || window.event;
+                var tooltip = document.getElementById('tooltip');
+                tooltip.style.left = e.clientX + 10 + "px";
+                tooltip.style.top = e.clientY + 10 + "px";
+            };
+            lis[i].onmouseout = function () {
+                var tooltip = document.getElementById('tooltip');
+                this.title = this.myTitle;
+                document.body.removeChild(tooltip);
+            }
+        }
 
 </script>
 </html>
